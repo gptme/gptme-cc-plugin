@@ -8,9 +8,9 @@ This package adds three Claude Code skills that let you delegate work to gptme w
 
 | Skill | Invocation | What it does |
 |-------|-----------|-------------|
-| `gptme-run` | `/gptme:run "<task>"` | Delegate a task to gptme's agent (shell, files, browser) |
-| `gptme-review` | `/gptme:review` | Multi-lens code review (correctness, security, test coverage) |
-| `gptme-context` | `/gptme:context` | Inject gptme workspace lessons/memory into this CC session |
+| `run` | `/gptme:run "<task>"` | Delegate a task to gptme's agent (shell, files, browser) |
+| `review` | `/gptme:review` | Multi-lens code review (correctness, security, test coverage) |
+| `context` | `/gptme:context` | Inject gptme workspace lessons/memory into this CC session |
 
 ## Prerequisites
 
@@ -24,11 +24,29 @@ This package adds three Claude Code skills that let you delegate work to gptme w
 
 ## Install
 
-```bash
-git clone https://github.com/gptme/gptme-cc-plugin ~/.claude/skills/gptme
+From inside Claude Code:
+
+```
+/plugin marketplace add gptme/gptme-cc-plugin
+/plugin install gptme@gptme-cc-plugin
 ```
 
-That's it. Restart Claude Code and invoke `/gptme:run`, `/gptme:review`, or `/gptme:context`.
+or from a shell:
+
+```bash
+claude plugin marketplace add gptme/gptme-cc-plugin
+claude plugin install gptme@gptme-cc-plugin
+```
+
+Then restart Claude Code and invoke `/gptme:run`, `/gptme:review`, or `/gptme:context`.
+`claude plugin details gptme` should list three skills: `context`, `review`, `run`.
+
+The skills are namespaced by the plugin name (`gptme`), which is why they are named
+`run`, `review` and `context` inside the plugin. Cloning this repo into
+`~/.claude/skills/gptme` does **not** work: personal skills are discovered at
+`~/.claude/skills/<name>/SKILL.md`, and this repo keeps its skills one level deeper.
+
+To try a local checkout without installing, run `claude --plugin-dir /path/to/gptme-cc-plugin`.
 
 ## Usage
 

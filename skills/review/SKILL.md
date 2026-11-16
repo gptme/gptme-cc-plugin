@@ -1,5 +1,5 @@
 ---
-name: gptme-review
+name: review
 description: >
   Run a multi-lens code review via gptme on the current git diff or a specific
   file. Use when the user invokes /gptme:review or asks for a gptme-style

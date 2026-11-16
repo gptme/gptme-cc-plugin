@@ -1,0 +1,14 @@
+{
+  "name": "gptme-cc-plugin",
+  "owner": {
+    "name": "Superuser Labs"
+  },
+  "description": "Claude Code skills that delegate work to gptme",
+  "plugins": [
+    {
+      "name": "gptme",
+      "source": "./",
+      "description": "Delegate work to gptme from Claude Code: /gptme:run, /gptme:review and /gptme:context"
+    }
+  ]
+}
