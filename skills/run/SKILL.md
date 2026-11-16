@@ -1,5 +1,5 @@
 ---
-name: gptme-run
+name: run
 description: >
   Delegate a multi-step task to gptme, a terminal-based AI agent with its own
   tools (shell, files, browser). Use when the user invokes /gptme:run or asks

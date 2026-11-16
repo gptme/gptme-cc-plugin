@@ -1,5 +1,5 @@
 ---
-name: gptme-context
+name: context
 description: >
   Inject gptme workspace lessons, skills, and memory into this Claude Code
   session. Use when the user invokes /gptme:context or wants to load gptme-style

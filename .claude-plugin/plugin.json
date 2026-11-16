@@ -1,0 +1,12 @@
+{
+  "name": "gptme",
+  "description": "Delegate work to gptme from Claude Code: /gptme:run, /gptme:review and /gptme:context",
+  "version": "0.1.0",
+  "author": {
+    "name": "Superuser Labs"
+  },
+  "homepage": "https://gptme.org",
+  "repository": "https://github.com/gptme/gptme-cc-plugin",
+  "license": "MIT",
+  "keywords": ["gptme", "agent", "code-review", "delegation"]
+}
